@@ -1,6 +1,6 @@
 
 #nav-bar {
-  background: #00a087;
+  background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
   height: 80px;
   width: 100%;
   color: #e8fdff;
@@ -22,4 +22,5 @@
   line-height: 80px;
   float: left;
   margin-left: 10px;
+  font-weight: bold;
 }
