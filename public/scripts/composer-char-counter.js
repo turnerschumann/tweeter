@@ -4,16 +4,16 @@ $(document).ready(function() {
   $(".new-tweet textarea").on('keypress', function() {
     charactersEntered = $("textarea").val().length
     remaining = 139 - charactersEntered
+    counter = $(this).siblings('.counter');
+    console.log(counter);
 
     if (remaining < 0) {
-      $('.new-tweet .counter').css({"color":"red"});
+      $(counter).css({"color":"red"});
     }
 
-    $('.new-tweet .counter').html(remaining);
+    $(counter).html(remaining);
   });
 
 
 });
-
-
 
