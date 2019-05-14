@@ -2,8 +2,11 @@ $(document).ready(function() {
 
 
   $("textarea").on('keypress', function() {
-    console.log("Hello There")
+    console.log(this);
+    console.log($("textarea").val().length);
   });
+
+  // $("textarea")
 
 
 
