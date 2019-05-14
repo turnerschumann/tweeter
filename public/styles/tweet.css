@@ -1,0 +1,67 @@
+#tweet-container article {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-bottom:1em;
+}
+
+#tweet-container header {
+  background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  float: left;
+  width: 100%
+}
+
+#tweet-container header h2 {
+  font-size: 115%;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+#tweet-container header h3 {
+  font-size: 90%;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-right: 5px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  float: right;
+  color: white;
+}
+
+#tweet-container  p {
+  overflow-wrap: break-word;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#tweet-container footer {
+  background-color: white;
+  border-top: 1px solid grey;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#tweet-container footer span {
+  font-size: 75%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: black;
+}
