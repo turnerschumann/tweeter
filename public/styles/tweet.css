@@ -1,7 +1,8 @@
 #tweet-container article {
-  background-color: #e0e0e0;
+  background-color: white;
   border-radius: 10px;
-  border-style: solid;
+  border-style: outset;
+  border-color: grey;
   border-width: 1px;
   margin-right: 2em;
   margin-left: 2em;
@@ -17,9 +18,20 @@
   width: 100%
 }
 
+#tweet-container header img {
+  float: left;
+  width: 40px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 #tweet-container header h2 {
   font-size: 115%;
-  padding-left: 15px;
+  padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 0px;
@@ -33,7 +45,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   padding-right: 5px;
-  padding-top: 8px;
+  padding-top: 5px;
   padding-bottom: 5px;
   float: right;
   color: white;
@@ -41,14 +53,16 @@
 
 #tweet-container  p {
   overflow-wrap: break-word;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 10px;
   margin-left: 15px;
   margin-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #tweet-container footer {
-  background-color: white;
+  background-color: #e0e0e0;
   border-top: 1px solid grey;
   margin-top: 0px;
   margin-bottom: 3px;
