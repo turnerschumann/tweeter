@@ -2,12 +2,12 @@ $(document).ready(function() {
 
 
   $("textarea").on('keypress', function() {
-    console.log(this);
-    console.log($("textarea").val().length);
+    charactersEntered = $("textarea").val().length
+    remaining = 139 - charactersEntered
+    console.log(remaining);
+
+    $('.counter').html(remaining);
   });
-
-  // $("textarea")
-
 
 
 });
