@@ -7,6 +7,13 @@
   margin-right: 2em;
   margin-left: 2em;
   margin-bottom:1em;
+  opacity: 0.8;
+}
+
+#tweet-container article:hover {
+  opacity: 1;
+  transition: 0.3s;
+
 }
 
 #tweet-container header {
@@ -16,6 +23,10 @@
   border-top-right-radius: 10px;
   float: left;
   width: 100%
+}
+
+#tweet-container header:hover {
+  background-color: red;
 }
 
 #tweet-container header img {
