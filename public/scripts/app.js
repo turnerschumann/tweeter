@@ -94,4 +94,10 @@ const createTweetElement = (tweetObj) => {
 
 renderTweets(data);
 
+$("#new-tweet").submit(function(event) {
+  alert("Handler for .submit() called.");
+  console.log("Handler for .submit() called.");
+  event.preventDefault();
+});
+
 });
