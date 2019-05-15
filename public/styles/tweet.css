@@ -1,18 +1,19 @@
 #tweet-container article {
   background-color: white;
   border-radius: 10px;
-  border-style: outset;
+  border-style: solid;
   border-color: grey;
   border-width: 1px;
   margin-right: 2em;
   margin-left: 2em;
   margin-bottom:1em;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #tweet-container article:hover {
   opacity: 1;
-  transition: 0.3s;
+  transition: 0.2s;
+  box-shadow: 5px 5px 10px grey;
 
 }
 
@@ -70,15 +71,17 @@
   margin-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+  opacity: 1;
 }
 
 #tweet-container footer {
-  background-color: #e0e0e0;
+background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
   border-top: 1px solid grey;
   margin-top: 0px;
-  margin-bottom: 3px;
+  margin-bottom: 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding-bottom: 2px;
 }
 
 #tweet-container footer span {
@@ -86,7 +89,9 @@
   margin-top: 0px;
   margin-bottom: 10px;
   margin-left: 10px;
+  padding-bottom: 5px
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: black;
+  color: white;
+  opacity: 1;
 }

@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
 
-  $(".new-tweet textarea").on('keypress', function() {
-    charactersEntered = $("textarea").val().length
-    remaining = 139 - charactersEntered
+  $(".new-tweet textarea").on('keyup', function() {
     let counter = $(this).siblings('.counter');
-    console.log(counter);
+    charactersEntered = $("textarea").val().length
+    remaining = 140 - charactersEntered
+    console.log(charactersEntered);
+    console.log($("textarea").val());
 
     if (remaining < 0) {
       $(counter).css({"color":"red"});
