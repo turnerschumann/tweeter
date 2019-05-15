@@ -92,13 +92,21 @@ const createTweetElement = (tweetObj) => {
   return $tweet;
 }
 
-renderTweets(data);
+function loadTweets() {
+  $.getJSON("/tweets").done(function (data) {
+    renderTweets(data);
+  });
+}
+
+loadTweets();
+
+// renderTweets(data);
 
 $("#new-tweet").submit(function(event) {
   console.log("Handler for .submit() called.");
   event.preventDefault();
   let text = $(this).serialize();
-  console.log(text);
+  $.ajax({method: post})
 });
 
 });
