@@ -12,15 +12,15 @@ const renderTweets = (tweets) => {
     $tweet = createTweetElement(tweet);
     $('#tweet-container').prepend($tweet);
   });
-}
+};
 
 const createTweetElement = (tweetObj) => {
-  let name = tweetObj.user.name
-  let avatar = tweetObj.user.avatars.regular
-  let handle = tweetObj.user.handle
-  let text = tweetObj.content.text
+  let name = tweetObj.user.name;
+  let avatar = tweetObj.user.avatars.regular;
+  let handle = tweetObj.user.handle;
+  let text = tweetObj.content.text;
   // let time = tweetObj.created_at;
-  let time = howLongAgo(tweetObj.created_at)
+  let time = howLongAgo(tweetObj.created_at);
   console.log(time);
 
   let $tweet = $('<article>').addClass('tweet');
@@ -47,7 +47,7 @@ const createTweetElement = (tweetObj) => {
 
   // console.dir("Tweet " + tweet)
   return $tweet;
-}
+};
 
 const loadTweets = () => {
   charCounter();
@@ -55,7 +55,7 @@ const loadTweets = () => {
   $.getJSON("/tweets").done(function (data) {
     renderTweets(data);
   });
-}
+};
 
 const tweetValidator = (input) => {
   char = $(".new-tweet textarea").val().length
@@ -69,7 +69,7 @@ const tweetValidator = (input) => {
     let result = "valid"
     return result
   }
-}
+};
 
 const submitForm = () => {
   $("#new-tweet").submit(function(event) {
@@ -99,7 +99,7 @@ const submitForm = () => {
 
     }
   });
-}
+};
 
 const charCounter = () => {
   if($("textarea").val().length === 0) {
@@ -118,21 +118,21 @@ const charCounter = () => {
     $(counter).html(remaining);
   });
 
-}
+};
 
 const howLongAgo = (time) => {
-  var a = new Date(time * 1000);
-  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
-  var sec = a.getSeconds();
-  // var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-  var time = "Posted " + month + " " + date;
-  return time;
-}
+  let a = new Date(time * 1000);
+  let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let year = a.getFullYear();
+  let month = months[a.getMonth()];
+  let date = a.getDate();
+  let hour = a.getHours();
+  let min = a.getMinutes();
+  let sec = a.getSeconds();
+  // let time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  let timeString= "Posted " + month + " " + date;
+  return timeString;
+};
 
 submitForm();
 
@@ -140,10 +140,7 @@ $("#compose-button").click(function(){
   $(".new-tweet").slideToggle("fast");
   $("textarea").select();
 });
-// tweetValidator();
 
 loadTweets();
-
-// renderTweets(data);
 
 });

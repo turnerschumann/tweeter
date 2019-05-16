@@ -1,7 +1,6 @@
 "use strict";
 
 // Simulates the kind of delay we see with network or filesystem operations
-const simulateDelay = require("./util/simulate-delay");
 const MongoClient   = require("mongodb").MongoClient;
 const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 
@@ -25,4 +24,4 @@ module.exports = function makeDataHelpers(db) {
     }
 
   };
-}
+};
