@@ -48,11 +48,10 @@ const createTweetElement = (tweetObj) => {
 }
 
 const loadTweets = () => {
-  console.log("loadTweets function run 1");
+  charCounter();
+  console.log("charactercounter run")
   $.getJSON("/tweets").done(function (data) {
     renderTweets(data);
-    console.log("loadTweets function run 3");
-
   });
 }
 
@@ -94,13 +93,29 @@ const submitForm = () => {
         data: text
       })
 
-
-
       loadTweets();
-
 
     }
   });
+}
+
+const charCounter = () => {
+  if($("textarea").val().length === 0) {
+    $("#character-counter").html(140);
+  }
+  $(".new-tweet textarea").on('keyup', function() {
+    let counter = $(this).siblings('.counter');
+    charactersEntered = $("textarea").val().length
+    remaining = 140 - charactersEntered
+    $(counter).css({"color":"white"});
+
+    if (remaining < 0) {
+      $(counter).css({"color":"red"});
+    }
+
+    $(counter).html(remaining);
+  });
+
 }
 
 submitForm();
