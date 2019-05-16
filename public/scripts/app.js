@@ -49,6 +49,7 @@ const createTweetElement = (tweetObj) => {
 const loadTweets = () => {
   $.getJSON("/tweets").done(function (data) {
     renderTweets(data);
+
   });
 }
 
@@ -67,6 +68,7 @@ const tweetValidator = (input) => {
 }
 
 const submitForm = () => {
+  $("#tweet-container").empty();
   $("#new-tweet").submit(function(event) {
     console.log("Handler for .submit() called.");
     event.preventDefault();
@@ -81,11 +83,15 @@ const submitForm = () => {
       return
     } else {
       console.log("Post attempt")
+
       $.ajax({
         method: "POST",
         url: "/tweets",
         data: text
-      });
+      }).done(() => {
+      loadTweets();
+
+    });
     }
   });
 }
@@ -93,7 +99,7 @@ const submitForm = () => {
 submitForm();
 // tweetValidator();
 
-loadTweets();
+// loadTweets();
 
 // renderTweets(data);
 

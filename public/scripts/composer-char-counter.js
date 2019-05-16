@@ -5,8 +5,7 @@ $(document).ready(function() {
     let counter = $(this).siblings('.counter');
     charactersEntered = $("textarea").val().length
     remaining = 140 - charactersEntered
-    console.log(charactersEntered);
-    console.log($("textarea").val());
+    $(counter).css({"color":"white"});
 
     if (remaining < 0) {
       $(counter).css({"color":"red"});
