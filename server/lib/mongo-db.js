@@ -3,15 +3,14 @@
 // Requiring a JSON file automatically parses it and returns the data. These
 // are just example tweets to make it less tedious to style the app initially.
 const db = {
-  tweets: require("./mongodb")
+  tweets: require("./mongoDataHelper")
 }
 
-const twats = require("./mongodb")
+const tweets = require("./mongoDataHelper")
 
-console.log("Tweets from inMEM: " + twats);
+console.log("Tweets from db: " + tweets);
 
 // console.log("db: " + db);
 // console.log("tweets: " + db.tweets[0].user.name)
 
 module.exports = db;
-
