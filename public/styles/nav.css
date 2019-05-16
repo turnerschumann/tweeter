@@ -24,3 +24,26 @@
   margin-left: 10px;
   font-weight: bold;
 }
+
+#nav-bar #compose-button {
+  float: right;
+  height: 55px;
+  width: 110px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  background-color: white;
+  color: #50b0f3;
+  display: inline;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  }
+
+  #nav-bar #compose-button:hover {
+    background-color: #d7e4ec;
+    transition: 0.3s;
+  }
+
+   #nav-bar #compose-button:focus {
+    outline: none;
+}

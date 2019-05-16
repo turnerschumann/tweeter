@@ -36,10 +36,12 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <input id="compose-button" type="submit" value="Compose">
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <div id="flip"></div>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="new-tweet"method="POST" action="/tweets">

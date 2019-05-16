@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #e0e0e0;
+  background-color: #d7e4ec;
   font-family: 'Roboto Condensed', sans-serif;
   vertical-align: middle;
   left: 100px;
@@ -28,10 +28,19 @@ body {
  */
 main {
   margin: auto;
-  width: 450px;
+  width: 550px;
+  height: 800px;
+  padding-right: 50px;
+  padding-left: 50px;
   background-color: white;
-  padding-top: 140px;
+  /*padding-top: 50px;*/
   padding-bottom: 20px;
 ;
+}
+
+#flip {
+  color:purple;
+  height:30px;
+  float: down;
 }
 

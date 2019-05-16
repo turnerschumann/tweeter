@@ -1,17 +1,19 @@
 
 .new-tweet {
   /*background-color: #1da1f2;*/
-  border-radius: 10px;
+  border-radius: 5px;
   border-style: solid;
   border-width: 0px;
   padding-right: 1em;
   padding-left: 1em;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 10px;
   margin-right: 2em;
   margin-left: 2em;
   margin-bottom:1em;
   background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
+  display: none;
 }
 
 .new-tweet h2 {
@@ -33,15 +35,15 @@
 .new-tweet textarea {
   width: 100%;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   border-width: 0px;
 }
 
 .new-tweet input {
   margin-top: 5px;
   margin-bottom: 0px;
-  border-radius: 10px;
-  background-color: white:;
+  border-radius: 5px;
+  background-color: white;
   color: #1da1f2;
   font-weight: bold;
 }

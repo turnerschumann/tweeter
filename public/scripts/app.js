@@ -97,6 +97,10 @@ const submitForm = () => {
 }
 
 submitForm();
+
+$("#compose-button").click(function(){
+  $(".new-tweet").slideToggle("fast");
+});
 // tweetValidator();
 
 // loadTweets();
