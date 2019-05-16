@@ -19,7 +19,9 @@ const createTweetElement = (tweetObj) => {
   let avatar = tweetObj.user.avatars.regular
   let handle = tweetObj.user.handle
   let text = tweetObj.content.text
-  let time = tweetObj.created_at
+  // let time = tweetObj.created_at;
+  let time = howLongAgo(tweetObj.created_at)
+  console.log(time);
 
   let $tweet = $('<article>').addClass('tweet');
   let $header = $('<header>').addClass('tweet-header');
@@ -116,6 +118,20 @@ const charCounter = () => {
     $(counter).html(remaining);
   });
 
+}
+
+const howLongAgo = (time) => {
+  var a = new Date(time * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  var hour = a.getHours();
+  var min = a.getMinutes();
+  var sec = a.getSeconds();
+  // var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  var time = "Posted " + month + " " + date;
+  return time;
 }
 
 submitForm();
