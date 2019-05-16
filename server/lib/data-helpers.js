@@ -26,8 +26,3 @@ module.exports = function makeDataHelpers(db) {
 
   };
 }
-
-
-// module.exports = function makeDataHelpers(db) {
-// console.log("DB from: " + db)
-// }

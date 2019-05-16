@@ -48,8 +48,10 @@ const createTweetElement = (tweetObj) => {
 }
 
 const loadTweets = () => {
+  console.log("loadTweets function run 1");
   $.getJSON("/tweets").done(function (data) {
     renderTweets(data);
+    console.log("loadTweets function run 3");
 
   });
 }
@@ -84,16 +86,19 @@ const submitForm = () => {
       return
     } else {
       console.log("Post attempt")
+      $("#new-tweet textarea").val('');
 
       $.ajax({
         method: "POST",
         url: "/tweets",
         data: text
-      }).done(() => {
-      $("#new-tweet textarea").val('');
+      })
+
+
+
       loadTweets();
 
-    });
+
     }
   });
 }
