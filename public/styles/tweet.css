@@ -75,7 +75,7 @@
 }
 
 #tweet-container footer {
-background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
+  background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
   border-top: 1px solid grey;
   margin-top: 0px;
   margin-bottom: 0px;
