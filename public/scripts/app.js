@@ -7,6 +7,7 @@
 
 
 const renderTweets = (tweets) => {
+  $("#tweet-container").empty();
   tweets.forEach(function(tweet) {
     $tweet = createTweetElement(tweet);
     $('#tweet-container').prepend($tweet);
@@ -68,7 +69,6 @@ const tweetValidator = (input) => {
 }
 
 const submitForm = () => {
-  $("#tweet-container").empty();
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     let text = $(this).serialize();
@@ -90,7 +90,8 @@ const submitForm = () => {
         url: "/tweets",
         data: text
       }).done(() => {
-      // loadTweets();
+      $("#new-tweet textarea").val('');
+      loadTweets();
 
     });
     }

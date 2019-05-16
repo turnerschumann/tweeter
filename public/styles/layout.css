@@ -21,6 +21,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   vertical-align: middle;
   left: 100px;
+  height: 100%;
 }
 
 /*
@@ -29,11 +30,10 @@ body {
 main {
   margin: auto;
   width: 550px;
-  height: 800px;
+  height: 100%;
   padding-right: 50px;
   padding-left: 50px;
   background-color: white;
-  /*padding-top: 50px;*/
   padding-bottom: 20px;
 ;
 }
