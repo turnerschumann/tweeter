@@ -70,16 +70,17 @@ const tweetValidator = (input) => {
 const submitForm = () => {
   $("#tweet-container").empty();
   $("#new-tweet").submit(function(event) {
-    console.log("Handler for .submit() called.");
     event.preventDefault();
     let text = $(this).serialize();
-    console.log("Validator outcome: " + tweetValidator())
+    $(".alert").hide();
 
     if (tweetValidator(text) === "empty") {
-      alert("Tweet content is empty");
+      $(".alert").show();
+      $(".alert").text("Tweet is Empty");
       return
     } else if (tweetValidator(text) === "long") {
-      alert("Tweet is too long");
+      $(".alert").show();
+      $(".alert").text("Tweet is too long");
       return
     } else {
       console.log("Post attempt")
