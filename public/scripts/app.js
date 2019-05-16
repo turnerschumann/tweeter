@@ -89,7 +89,7 @@ const submitForm = () => {
         url: "/tweets",
         data: text
       }).done(() => {
-      loadTweets();
+      // loadTweets();
 
     });
     }
@@ -100,10 +100,11 @@ submitForm();
 
 $("#compose-button").click(function(){
   $(".new-tweet").slideToggle("fast");
+  $("textarea").select();
 });
 // tweetValidator();
 
-// loadTweets();
+loadTweets();
 
 // renderTweets(data);
 
