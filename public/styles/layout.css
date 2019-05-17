@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #d7e4ec;
+  background-color: #f1f2f4;
   font-family: 'Roboto Condensed', sans-serif;
   vertical-align: middle;
   left: 100px;
@@ -28,13 +28,17 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 main {
+  background-color: #f1f2f4;
   margin: auto;
+  margin-top: 80px;
   width: 550px;
   height: 100%;
   padding-right: 50px;
   padding-left: 50px;
-  background-color: white;
   padding-bottom: 20px;
+  -webkit-box-shadow: 1px 0px 20px -10px rgba(62,80,92,0.5);
+  -moz-box-shadow: 1px 0px 20px -10px rgba(62,80,92,0.5);
+  box-shadow: 1px 0px 20px -10px rgba(62,80,92,0.5);
 ;
 }
 

@@ -34,7 +34,7 @@ const createTweetElement = (tweetObj) => {
   let $span = $('<span>').text(time).addClass('tweet-time');
   let $body = $('<div>').addClass('tweet-body');
 
-  let $icon = $('<img>').attr("src", icon).addClass('icon');
+  let $icon = $('<img>').attr("src", icon).addClass('icon').attr('id', 'edge-icon');;
   let $icon2 = $('<img>').attr("src", icon2).addClass('icon');
   let $icon3 = $('<img>').attr("src", icon3).addClass('icon');
 

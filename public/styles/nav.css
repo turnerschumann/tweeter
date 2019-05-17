@@ -1,11 +1,18 @@
 
 #nav-bar {
-  background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);
+  /*background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);*/
+  background-color: #5bade8;
   height: 80px;
   width: 100%;
   color: #e8fdff;
   padding-right: 2em;
   padding-left: 2em;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 #nav-bar .logo {
