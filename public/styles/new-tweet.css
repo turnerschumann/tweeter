@@ -11,13 +11,13 @@
   margin-top: 10px;
   margin-right: 2em;
   margin-left: 2em;
-  margin-bottom:1em;
+  margin-bottom:30px;
   /*background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);*/
   background-color: #5bade8;
   display: none;
-  -webkit-box-shadow: 1px 0px 10px -10px rgba(62,80,92,0.7);
-  -moz-box-shadow: 1px 0px 10px -10px rgba(62,80,92,0.7);
-  box-shadow: 1px 0px 10px -10px rgba(62,80,92,0.7);
+  -webkit-box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
+  -moz-box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
+  box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
 }
 
 .new-tweet h2 {

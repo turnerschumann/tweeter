@@ -20,9 +20,6 @@ const createTweetElement = (tweetObj) => {
   let handle = tweetObj.user.handle;
   let text = tweetObj.content.text;
   let time = moment(tweetObj.created_at).fromNow();
-  let icon = "../images/like.png";
-  let icon2 = "../images/star.png";
-  let icon3 = "../images/share.png";
 
   let $tweet = $('<article>').addClass('tweet');
   let $header = $('<header>').addClass('tweet-header');
@@ -34,22 +31,28 @@ const createTweetElement = (tweetObj) => {
   let $span = $('<span>').text(time).addClass('tweet-time');
   let $body = $('<div>').addClass('tweet-body');
 
-  let $icon = $('<img>').attr("src", icon).addClass('icon').attr('id', 'edge-icon');;
-  let $icon2 = $('<img>').attr("src", icon2).addClass('icon');
-  let $icon3 = $('<img>').attr("src", icon3).addClass('icon');
+  let $thumbs_up = $('<i>').addClass('fas fa-thumbs-up');
+  let $flag = $('<i>').addClass('fas fa-flag');
+  let $retweet = $('<i>').addClass('fas fa-retweet');
+  let $thumbs_div = $('<div>').addClass('thumb-div');
+  let $flag_div = $('<div>').addClass('flag-div');
+  let $retweet_div = $('<div>').addClass('retweet-div');
 
   $header.append($img);
   $header.append($h2);
   $header.append($h3);
   $tweet.append($header);
-
   $body.append($p);
   $tweet.append($body);
 
   $footer.append($span);
-  $footer.append($icon);
-  $footer.append($icon2);
-  $footer.append($icon3);
+
+  $flag_div.append($flag);
+  $footer.append($flag_div);
+  $retweet_div.append($retweet);
+  $footer.append($retweet_div);
+  $thumbs_div.append($thumbs_up);
+  $footer.append($thumbs_div);
   $tweet.append($footer);
 
 

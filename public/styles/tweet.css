@@ -1,41 +1,37 @@
 #tweet-container article {
   background-color: white;
-  /*border-radius: 5px;*/
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-/*  border-style: solid;
-  border-color: grey;
-  border-width: 0px;*/
-  /*border-top: 4px solid #50b0f3;*/
-  border-left: 6px solid #50b0f3;
+  border-radius: 5px;
+  border-left: 6px solid #f1f2f4;
   margin-right: 2em;
   margin-left: 2em;
   margin-bottom:30px;
   margin-top: 20px;
-  opacity: 0.8;
-  -webkit-box-shadow: 1px 0px 10px -10px rgba(62,80,92,0.5);
-  -moz-box-shadow: 1px 0px 10px -10px rgba(62,80,92,0.5);
-  box-shadow: 1px 0px 10px -10px rgba(62,80,92,0.5);
+  -webkit-box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
+  -moz-box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
+  box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
 }
 
 #tweet-container article:hover {
-  opacity: 1;
-  transition: 0.2s;
-  -webkit-box-shadow: -1px 15px 20px -15px rgba(62,80,92,1);
-  -moz-box-shadow: -1px 15px 20px -15px rgba(62,80,92,1);
-  box-shadow: -1px 15px 20px -15px rgba(62,80,92,1);
+  border-left: 6px solid #50b0f3;
+  transition: 0.5s;
+  -webkit-box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
+  -moz-box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
+  box-shadow: 8px 15px 20px -15px rgba(62,80,92,0.5);
 }
 
 #tweet-container header {
-  /*background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);*/
-  background-color: #d9d9d9;
+  background-color: #d9d9d9ad;
   color: white;
-  /*border-top-left-radius: 5px;*/
   border-top-right-radius: 5px;
   float: left;
-  width: 100%
+  width: 100%;
 }
 
+#tweet-container article:hover header {
+  transition: 0.3s;
+  background-color: #d9d9d9;
+  border-top-left-radius: 0px;
+}
 
 #tweet-container header img {
   float: left;
@@ -47,6 +43,19 @@
   margin-left: 10px;
   margin-right: 5px;
 }
+
+/*#tweet-container header .overlay {
+  float: left;
+  /*position: relative;*/
+/*  width: 40px;
+  height: 40px;
+  background-color: #f1f2f430;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+}*/
 
 #tweet-container header h2 {
   font-size: 115%;
@@ -72,10 +81,6 @@
   color: #767b82;
 }
 
-#tweet-container header h3:hover {
-  opacity: 0.5;
-}
-
 #tweet-container  p {
   overflow-wrap: break-word;
   margin-top: 0px;
@@ -90,13 +95,16 @@
 }
 
 #tweet-container footer {
-  /*background-image: linear-gradient(to bottom right, #50b0f3, #1a95e0);*/
-  /*border-top: 1px solid grey;*/
   margin-top: 10px;
   margin-bottom: 0px;
-  /*border-bottom-left-radius: 5px;*/
+  height: 25px;
   border-bottom-right-radius: 5px;
   padding-bottom: 2px;
+  background-color: #d9d9d9ad;
+}
+
+#tweet-container article:hover footer {
+  transition: 0.3s;
   background-color: #d9d9d9;
 }
 
@@ -105,36 +113,78 @@
   margin-top: 0px;
   margin-bottom: 10px;
   margin-left: 10px;
-  padding-bottom: 5px
+  padding-bottom: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #767b82;
-  opacity: 1;
 }
 
-#tweet-container footer .icon {
-  opacity: 0;
+.thumb-div {
   float: right;
-  width: 18px;
-  height: auto;
-  padding-right: 2px;
-  padding-left: 2px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  color: #5bade8;
+  margin-left: 5px;
+  margin-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.thumb-div:hover {
+  color: white;
+}
+
+.retweet-div {
+  float: right;
+  color: #5bade8;
   margin-left: 2px;
   margin-right: 2px;
+  padding-top: 4px;
+  padding-bottom: 2px;
 }
 
-#tweet-container footer #edge-icon {
+.retweet-div:hover {
+  color: white;
+}
+
+.flag-div {
+  float: right;
+  color: #5bade8;
+  margin-left: 2px;
   margin-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
-#tweet-container article:hover footer img {
-  transition: 0.5s;
+.flag-div:hover {
+  color: white;
+}
+
+.fa-thumbs-up {
+  opacity: 0;
+  font-size: 95%;
+}
+
+article:hover .fa-thumbs-up {
   opacity: 1;
+  transition: 0.4s;
 }
 
-#tweet-container footer .icon:hover {
-  opacity: 0.5;
-  transition: 0.2s;
+
+.fa-retweet {
+  opacity: 0;
+  font-size: 100%;
+}
+
+article:hover .fa-retweet {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.fa-flag {
+  opacity: 0;
+  font-size: 85%;
+}
+
+article:hover .fa-flag {
+  opacity: 1;
+  transition: 0.4s;
 }
