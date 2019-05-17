@@ -44,19 +44,6 @@
   margin-right: 5px;
 }
 
-/*#tweet-container header .overlay {
-  float: left;
-  /*position: relative;*/
-/*  width: 40px;
-  height: 40px;
-  background-color: #f1f2f430;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 5px;
-}*/
-
 #tweet-container header h2 {
   font-size: 115%;
   padding-left: 5px;
@@ -65,8 +52,11 @@
   margin-top: 0px;
   margin-bottom: 0px;
   float: left;
+  color: #494c50c4;
+}
+
+article:hover #tweet-container header h2 {
   color: #494c50;
-  opacity: 1;
 }
 
 #tweet-container header h3 {
@@ -79,6 +69,12 @@
   padding-bottom: 5px;
   float: right;
   color: #767b82;
+  opacity: 0.8;
+}
+
+article:hover #tweet-container header h3 {
+  color: #767b82;
+  opacity: 1;
 }
 
 #tweet-container  p {
@@ -91,7 +87,7 @@
   padding-bottom: 15px;
   opacity: 1;
   color: #494c50;
-  font-size: 90%
+  /*font-size: 100%*/
 }
 
 #tweet-container footer {

@@ -148,7 +148,7 @@ const howLongAgo = (time) => {
 submitForm();
 
 $("#compose-button").click(function(){
-  $(".new-tweet").slideToggle("fast");
+  $(".new-tweet").slideToggle( 400, "swing" );
   $("textarea").select();
 });
 
