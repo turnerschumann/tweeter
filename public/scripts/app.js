@@ -19,9 +19,10 @@ const createTweetElement = (tweetObj) => {
   let avatar = tweetObj.user.avatars.regular;
   let handle = tweetObj.user.handle;
   let text = tweetObj.content.text;
-  // let time = tweetObj.created_at;
-  let time = howLongAgo(tweetObj.created_at);
-  console.log(time);
+  let time = moment(tweetObj.created_at).fromNow();
+  let icon = "../images/like.png";
+  let icon2 = "../images/star.png";
+  let icon3 = "../images/share.png";
 
   let $tweet = $('<article>').addClass('tweet');
   let $header = $('<header>').addClass('tweet-header');
@@ -33,6 +34,10 @@ const createTweetElement = (tweetObj) => {
   let $span = $('<span>').text(time).addClass('tweet-time');
   let $body = $('<div>').addClass('tweet-body');
 
+  let $icon = $('<img>').attr("src", icon).addClass('icon');
+  let $icon2 = $('<img>').attr("src", icon2).addClass('icon');
+  let $icon3 = $('<img>').attr("src", icon3).addClass('icon');
+
   $header.append($img);
   $header.append($h2);
   $header.append($h3);
@@ -42,6 +47,9 @@ const createTweetElement = (tweetObj) => {
   $tweet.append($body);
 
   $footer.append($span);
+  $footer.append($icon);
+  $footer.append($icon2);
+  $footer.append($icon3);
   $tweet.append($footer);
 
 

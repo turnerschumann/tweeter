@@ -63,6 +63,10 @@
   color: white;
 }
 
+#tweet-container header h3:hover {
+  opacity: 0.5;
+}
+
 #tweet-container  p {
   overflow-wrap: break-word;
   margin-top: 60px;
@@ -94,4 +98,24 @@
   border-bottom-right-radius: 5px;
   color: white;
   opacity: 1;
+}
+
+#tweet-container footer .icon {
+  opacity: 0;
+  float: right;
+  width: 18px;
+  height: auto;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin: 2px;
+}
+
+#tweet-container article:hover footer img {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+#tweet-container footer .icon:hover {
+  opacity: 0.5;
+  transition: 0.2s;
 }
